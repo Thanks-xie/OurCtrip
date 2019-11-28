@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    android:background="@color/bg_gray">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+       >
+        <!--广告轮播图-->
+        <com.youth.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="152dp"/>
+        <!--搜索框-->
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="40dp"
+            android:background="@drawable/search_edit_round" />
+
+        <!--中部菜单-->
+       <include android:id="@+id/re_card"
+           android:layout_below="@id/banner"
+           android:layout_margin="15dp"
+           android:layout_width="match_parent"
+           android:layout_height="152dp"
+           layout="@layout/menu_card"/>
+        <!--功能选项卡-->
+          <include
+              android:layout_below="@id/re_card"
+              android:id="@+id/card_layout"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              layout="@layout/card_layout"/>
+
+        <RelativeLayout
+            android:layout_below="@+id/card_layout"
+            android:id="@+id/re_scenery_hot"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/bg_round_white">
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/scenery_hot_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="热门风景"/>
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/scenery_hot_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更多"
+                android:textSize="12sp"
+                android:drawableRight="@drawable/next_icon"/>
+            <!--热门风景轮播图-->
+            <com.youth.banner.Banner
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/scenery_hot_text"
+                android:id="@+id/banner_scenery_hot"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"/>
+
+        </RelativeLayout>
+        </RelativeLayout>
+
+</ScrollView>
