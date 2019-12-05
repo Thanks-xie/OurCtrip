@@ -32,5 +32,7 @@ dependencies {
     //glide，比较好的版本，Matisse版本，配合glide3.7.0，因为后面的glide版本没有了asbitmap等方法
     implementation 'com.github.bumptech.glide:glide:3.7.0'
 
+    //腾讯云地图
+    implementation'com.tencent.map.geolocation:TencentLocationSdk-openplatform:7.2.4'
 
 }

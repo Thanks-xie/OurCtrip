@@ -1,9 +1,6 @@
 package cn.xie.ourctrip.util;
 
-/**
- * @author xiejinbo
- * @date 2019/11/28 0028 11:41
- */
+
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -16,9 +13,10 @@ import android.graphics.RectF;
 import com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool;
 import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
 
-
 /**
  * 利用Glide加载图片时，可以用此方法加载成圆角
+ * @author xiejinbo
+ * @date 2019/11/28 0028 11:41
  */
 public class GlideRoundImage extends BitmapTransformation {
 

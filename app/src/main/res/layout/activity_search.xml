@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    tools:context=".activity.SearchActivity">
+
+    <RelativeLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/back"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_blue"/>
+
+        <cn.xie.ourctrip.view.EditTextSearch
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/back"
+            android:layout_toLeftOf="@+id/search_to"
+            android:id="@+id/search_text"
+            android:background="@drawable/search_edit_round"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/search_to"
+            android:text="搜索"
+            android:textColor="@android:color/holo_blue_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -23,9 +23,9 @@ public class Utils {
 
     /**
      * 加载图片轮播图公共方法
-     * @param context
-     * @param imagesList
-     * @param radius
+     * @param context 上下文
+     * @param imagesList 图片资源list
+     * @param radius 圆角值
      */
     public static Banner initBanner(Context context, Banner banner, List<String> imagesList, final float radius){
 

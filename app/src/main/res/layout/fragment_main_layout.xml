@@ -2,76 +2,81 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_gray"
     android:orientation="vertical"
-    android:scrollbars="none"
-    android:background="@color/bg_gray">
+    android:scrollbars="none">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-       >
+        android:orientation="vertical">
         <!--广告轮播图-->
         <com.youth.banner.Banner
             android:id="@+id/banner"
             android:layout_width="match_parent"
-            android:layout_height="152dp"/>
-        <!--搜索框-->
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/search"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_margin="40dp"
-            android:background="@drawable/search_edit_round" />
-
-        <!--中部菜单-->
-       <include android:id="@+id/re_card"
-           android:layout_below="@id/banner"
-           android:layout_margin="15dp"
-           android:layout_width="match_parent"
-           android:layout_height="152dp"
-           layout="@layout/menu_card"/>
-        <!--功能选项卡-->
-          <include
-              android:layout_below="@id/re_card"
-              android:id="@+id/card_layout"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              layout="@layout/card_layout"/>
-
+            android:layout_height="152dp" />
+        <!--搜索框一栏-->
         <RelativeLayout
-            android:layout_below="@+id/card_layout"
-            android:id="@+id/re_scenery_hot"
+            android:id="@+id/re_search"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_margin="15dp"
-            android:background="@drawable/bg_round_white">
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content">
+
             <TextView
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="10dp"
-                android:id="@+id/scenery_hot_text"
+                android:id="@+id/location_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="热门风景"/>
-            <TextView
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="10dp"
-                android:layout_alignParentRight="true"
-                android:id="@+id/scenery_hot_more"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="更多"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="重庆"
+                android:textColor="@android:color/white"
                 android:textSize="12sp"
-                android:drawableRight="@drawable/next_icon"/>
-            <!--热门风景轮播图-->
-            <com.youth.banner.Banner
-                android:layout_marginTop="15dp"
-                android:layout_below="@+id/scenery_hot_text"
-                android:id="@+id/banner_scenery_hot"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/choose_next_icon"/>
+
+            <cn.xie.ourctrip.view.EditTextSearch
+                android:id="@+id/search"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"/>
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/location_text"
+                android:layout_toLeftOf="@+id/message_icon"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/search_edit_round" />
+
+            <ImageView
+                android:id="@+id/message_icon"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/message_icon"/>
 
         </RelativeLayout>
-        </RelativeLayout>
+        <!--中部菜单-->
+        <include
+            android:id="@+id/re_card"
+            layout="@layout/menu_card"
+            android:layout_width="match_parent"
+            android:layout_height="152dp"
+            android:layout_below="@id/banner"
+            android:layout_margin="15dp" />
+        <!--功能选项卡-->
+        <include
+            android:id="@+id/card_layout"
+            layout="@layout/card_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/re_card" />
+        <!--热门风景-->
+        <include
+            android:id="@+id/re_scenery_hot"
+            layout="@layout/scenery_hot"/>
+    </RelativeLayout>
 
 </ScrollView>
